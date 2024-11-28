@@ -72,6 +72,7 @@ npm run dev
 ## Hosted Online Version
 
 You can access the hosted online version of the app at the following link:
+https://friendlydebate.pages.dev/
 
 ## Contributing
 
