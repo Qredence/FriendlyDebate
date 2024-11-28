@@ -1,4 +1,5 @@
 # FriendlyDebate
+![FriendlyDebateGIF](https://github.com/user-attachments/assets/93c13a88-62b6-4b8a-94da-52b5c87a7d8a)
 
 A small very simple tool for helping friends debate with a timer, speaker, participant turns.
 
