@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* iOS System Colors */
+    --system-blue: rgb(0, 122, 255);
+    --system-green: rgb(52, 199, 89);
+    --system-indigo: rgb(88, 86, 214);
+    --system-orange: rgb(255, 149, 0);
+    --system-pink: rgb(255, 45, 85);
+    --system-purple: rgb(175, 82, 222);
+    --system-red: rgb(255, 59, 48);
+    --system-teal: rgb(90, 200, 250);
+    --system-yellow: rgb(255, 204, 0);
+    --system-gray: rgb(142, 142, 147);
+    --system-gray2: rgb(174, 174, 178);
+    --system-gray3: rgb(199, 199, 204);
+    --system-gray4: rgb(209, 209, 214);
+    --system-gray5: rgb(229, 229, 234);
+    --system-gray6: rgb(242, 242, 247);
+    
+    /* Background Colors */
+    --system-background: rgb(242, 242, 247);
+    --system-grouped-background: rgb(242, 242, 247);
+    --system-secondary-background: rgb(255, 255, 255);
+  }
+
+  body {
+    @apply bg-[--system-background] font-sans antialiased text-[17px] leading-[1.47059];
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1 {
+    @apply text-[34px] leading-[1.2] font-bold tracking-[0.38px];
+  }
+
+  h2 {
+    @apply text-[28px] leading-[1.2] font-semibold tracking-[0.36px];
+  }
+}
+
+@layer components {
+  .ios-blur {
+    @apply backdrop-blur-xl bg-white/70 supports-[backdrop-filter]:bg-white/70;
+  }
+
+  .ios-card {
+    @apply ios-blur rounded-2xl border border-white/20 shadow-sm;
+  }
+
+  .ios-button {
+    @apply rounded-full px-6 py-3 font-semibold text-[17px] leading-none
+    transition-all duration-300 active:scale-95 
+    disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .ios-button-primary {
+    @apply ios-button bg-[--system-blue] text-white hover:opacity-90;
+  }
+
+  .ios-button-secondary {
+    @apply ios-button bg-white/80 text-[--system-blue] border border-[--system-blue]/20
+    hover:bg-[--system-blue]/10;
+  }
+
+  .ios-input {
+    @apply w-full px-4 py-3 rounded-lg bg-white/80 border border-[--system-gray4]
+    focus:ring-2 focus:ring-[--system-blue] focus:border-transparent
+    placeholder:text-[--system-gray] text-[17px] leading-none transition-all duration-300;
+  }
+
+  .ios-label {
+    @apply text-[15px] font-medium text-[--system-gray] mb-2;
+  }
+
+  .ios-nav-title {
+    @apply text-[17px] font-semibold;
+  }
+
+  .ios-sheet {
+    @apply fixed inset-x-0 bottom-0 ios-blur rounded-t-2xl shadow-lg 
+    transform transition-transform duration-300 ease-out;
+  }
+
+  .ios-sheet-handle {
+    @apply w-8 h-1 bg-[--system-gray4] rounded-full mx-auto my-2;
+  }
+}
+
+@layer utilities {
+  .ios-animation {
+    @apply transition-all duration-300 ease-out;
+  }
+
+  .ios-spring {
+    @apply transition-all duration-500 ease-[cubic-bezier(0.175,0.885,0.32,1.275)];
+  }
+}
+
+/* iOS Dynamic Island Animation */
+@keyframes dynamicIslandExpand {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
