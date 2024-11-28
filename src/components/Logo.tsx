@@ -1,15 +1,28 @@
-import React from 'react';
-import { MessageCircle } from 'lucide-react';
+import React from "react";
+import LogoSvg from "../assets/logo.svg";
 
 interface LogoProps {
   className?: string;
+  size?: number | string;
+  alt?: string;
 }
 
-export function Logo({ className = '' }: LogoProps) {
+export function Logo({
+  className = "",
+  size = 40,
+  alt = "Application Logo",
+}: LogoProps) {
   return (
-    <div className={`flex items-center gap-2 ${className}`}>
-      <MessageCircle className="w-6 h-6 sm:w-8 sm:h-8 text-[var(--system-blue)]" />
-      <span className="font-bold text-xl sm:text-2xl">FriendlyDebate</span>
+    <div className={`flex items-center gap-2 ${className}`} data-oid="7rs246k">
+      <img
+        src={LogoSvg}
+        alt={alt}
+        width={size}
+        height={size}
+        style={{ width: size, height: size }}
+        loading="eager"
+        data-oid="ibku9qf"
+      />
     </div>
   );
 }

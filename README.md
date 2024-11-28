@@ -26,27 +26,37 @@ FriendlyDebate is a fun side project designed to help friends engage in enjoyabl
 To set up the project locally, follow these steps:
 
 1. **Clone the repository**:
+
    ```sh
    git clone https://github.com/Qredence/FriendlyDebate.git
    cd FriendlyDebate
    ```
 
 2. **Install dependencies**:
+
    ```sh
    npm install
    ```
 
-3. **Start the development server**:
+3. **Build the app**:
+
+   ```sh
+   npm run build
+   ```
+
+4. **Start the development server**:
+
    ```sh
    npm run dev
    ```
 
-4. **Open the app in your browser**:
-   Navigate to `http://localhost:3000` to see the app in action.
+5. **Open the app in your browser**:
+   Navigate to `http://localhost:5176` to see the app in action.
 
 ## Build the app
 
 To build the app, run the following command:
+
 ```sh
 npx vite build
 ```
@@ -54,6 +64,7 @@ npx vite build
 ## Run the app
 
 To run the app, use the following command:
+
 ```sh
 npm run dev
 ```
@@ -61,7 +72,6 @@ npm run dev
 ## Hosted Online Version
 
 You can access the hosted online version of the app at the following link:
-[Hosted Online Version](https://lustrous-shortbread-c214bf.netlify.app/)
 
 ## Contributing
 
