@@ -85,3 +85,7 @@ We welcome contributions to FriendlyDebate! If you have any ideas, suggestions, 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgements
+
+This project was built using  Bolt.new and Onlook.
